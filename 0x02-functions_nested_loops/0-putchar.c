@@ -1,19 +1,20 @@
 #include "main.h"
+
 /**
- * main - print _putchar
- * is writter by mbah
- * Return: 0
+ * main - prints the word _putchar
+ * Return: return 0
  */
 
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('a');
-_putchar('r');
+char word[9] = "_putchar";
+int i = 0;
+
+while (i < 8)
+{
+_putchar(word[i]);
+i++;
+}
 _putchar('\n');
 return (0);
 }
