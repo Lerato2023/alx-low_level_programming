@@ -1,4 +1,31 @@
-ELF              >     €       @       °9          @ 8 
- @ -           @       @       @       Ø       Ø                                                                                                       8       8                                               ¥       ¥                                               `       `                       °-      °=      °=      `       h                       À-      À=      À=      ð       ð                       8       8       8                                       X       X       X       D       D               Såtd    8       8       8                               Påtd                            D       D               Qåtd                                                    Råtd    °-      °=      °=      P       P               /lib64/ld-linux-x86-64.so.2                 GNU    À                        GNU ÊSd /æ Ü Þ´) ö›± & r            GNU                                                  ÑeÎm                            
-                       G                                               )                       c                       r                           "                    libc.so.6 putchar printf __cxa_finalize __libc_start_main GLIBC_2.2.5 _ITM_deregisterTMCloneTable __gmon_start__ _ITM_registerTMCloneTable                                     u i	    ;       °=              `       ¸=                       @               @      Ø?                      à?                      è?                      ð?                      ø?                     È?                     Ð?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ó  úHƒì H‹ Ù/  H…Àt ÿÐHƒÄ Ã     ÿ5’/  òÿ%“/   - ó  úh    òéáÿÿÿó  úh    òéÑÿÿÿó  úòÿ%/   ¬D  ó  úòÿ%]/   ¬D  ó  úòÿ%U/   -D  ó  ú1íI‰Ñ^H‰âHƒäðPTL ö   H
-   H=Á   ÿ 2/  ôH=Y/  H R/  H9øt H‹ 
+#include <stdio.h>
+
+/**
+ * main - Prints the first 52 fibonacci numbers
+ *
+ * Return: Nothing!
+ */
+int main(void)
+{
+int i = 0;
+long j = 1, k = 2;
+
+while (i < 50)
+{
+if (i == 0)
+printf("%ld", j);
+else if (i == 1)
+printf(", %ld", k);
+else
+{
+k += j;
+j = k - j;
+printf(", %ld", k);
+}
+
+++i;
+}
+
+printf("\n");
+return (0);
+} 
