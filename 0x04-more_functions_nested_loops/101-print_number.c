@@ -1,18 +1,27 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_numbers - prints the numbers, from 0 to 9,
- * followed by a new line
+ * print_number - prints numbers
+ * @n: number to be printed
  */
-
-void print_numbers(void)
+void print_number(int n)
 {
-int i;
+	unsigned int n1;
 
-for (i = 0; i < 10; i++)
-{
-_putchar(i + '0');
+	if (n < 0)
+	{
+		n1 = -n;
+		_putchar('-');
+	} else
+	{
+		n1 = n;
+	}
+
+	if (n1 / 10)
+	{
+		print_number(n1 / 10);
+	}
+
+	_putchar((n1 % 10) + '0');
 }
-
-_putchar('\n');
-}}
