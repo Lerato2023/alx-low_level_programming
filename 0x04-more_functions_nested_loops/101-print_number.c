@@ -1,25 +1,18 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer
- * @n: integer to be printed
+ * print_numbers - prints the numbers, from 0 to 9,
+ * followed by a new line
  */
-void print_number(int n)
+
+void print_numbers(void)
 {
-unsigned int n1;
-if (n < 0)
+int i;
+
+for (i = 0; i < 10; i++)
 {
-n1 = -n;
-_putchar('_');
-}
-else
-{
-n1 = n;
+_putchar(i + '0');
 }
 
-if (n1 / 10)
-{
-print_number(n1 / 10);
-}
-_putchar((n1 % 10) + '0');
-}
+_putchar('\n');
+}}
